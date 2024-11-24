@@ -1,0 +1,6 @@
+﻿services:
+  tools.numbertowordsconversion:
+    image: tools.numbertowordsconversion
+    build:
+      context: .
+      dockerfile: Dockerfile
