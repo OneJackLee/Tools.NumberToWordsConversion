@@ -7,10 +7,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Tools.NumberToWordsConversion.csproj", "./"]
-RUN dotnet restore "Tools.NumberToWordsConversion.csproj"
+COPY ["Tools.NumberToWordsConversion/Tools.NumberToWordsConversion.csproj", "Tools.NumberToWordsConversion/"]
+RUN dotnet restore "Tools.NumberToWordsConversion/Tools.NumberToWordsConversion.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/Tools.NumberToWordsConversion"
 RUN dotnet build "Tools.NumberToWordsConversion.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

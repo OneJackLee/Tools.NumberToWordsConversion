@@ -3,4 +3,4 @@
     image: tools.numbertowordsconversion
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Tools.NumberToWordsConversion/Dockerfile

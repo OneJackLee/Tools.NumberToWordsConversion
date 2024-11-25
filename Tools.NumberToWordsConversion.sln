@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion", "Tools.NumberToWordsConversion.csproj", "{4D6CB361-49C9-40A3-937E-A3EDEBF8458D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion", "Tools.NumberToWordsConversion\Tools.NumberToWordsConversion.csproj", "{B48840CB-9E1B-44FE-8D05-0477201C7677}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78E45D7A-EFE6-4D2B-87C8-FA9278AA490C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4E444A8-C9DE-4159-96AB-EA7D496EAA47}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Tests", "tests\Tools.NumberToWordsConversion.Tests\Tools.NumberToWordsConversion.Tests.csproj", "{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,9 +15,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D6CB361-49C9-40A3-937E-A3EDEBF8458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D6CB361-49C9-40A3-937E-A3EDEBF8458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D6CB361-49C9-40A3-937E-A3EDEBF8458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D6CB361-49C9-40A3-937E-A3EDEBF8458D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
