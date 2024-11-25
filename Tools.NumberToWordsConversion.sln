@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Web", "Tools.NumberToWordsConversion.Web\Tools.NumberToWordsConversion.Web.csproj", "{B48840CB-9E1B-44FE-8D05-0477201C7677}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Web", "Tools.NumberToWordsConversion.Web\Tools.NumberToWordsConversion.Web.csproj", "{61FEDCAA-09A8-42EE-B0DE-093A6C776BD1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4E444A8-C9DE-4159-96AB-EA7D496EAA47}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{429A095D-9BFC-4253-920B-FE4E49CA20E3}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5A5FA9A7-8E2A-4B73-8E2E-141EE10097C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Application", "Tools.NumberToWordsConversion.Application\Tools.NumberToWordsConversion.Application.csproj", "{32EF10EA-2112-4BA7-9891-1286ECD7DB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Tests", "tests\Tools.NumberToWordsConversion.Tests\Tools.NumberToWordsConversion.Tests.csproj", "{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AC5223D1-B7D5-4F43-AFC2-04E897AD4C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Application", "Tools.NumberToWordsConversion.Application\Tools.NumberToWordsConversion.Application.csproj", "{0BA61A93-3CDC-4E98-84D5-1F24939C1B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.NumberToWordsConversion.Tests", "Tools.NumberToWordsConversion.Tests\Tools.NumberToWordsConversion.Tests.csproj", "{25DC2A62-E73B-4650-B87F-4C339887C447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,20 +19,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B48840CB-9E1B-44FE-8D05-0477201C7677}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BA61A93-3CDC-4E98-84D5-1F24939C1B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BA61A93-3CDC-4E98-84D5-1F24939C1B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BA61A93-3CDC-4E98-84D5-1F24939C1B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BA61A93-3CDC-4E98-84D5-1F24939C1B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61FEDCAA-09A8-42EE-B0DE-093A6C776BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61FEDCAA-09A8-42EE-B0DE-093A6C776BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61FEDCAA-09A8-42EE-B0DE-093A6C776BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61FEDCAA-09A8-42EE-B0DE-093A6C776BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32EF10EA-2112-4BA7-9891-1286ECD7DB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32EF10EA-2112-4BA7-9891-1286ECD7DB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32EF10EA-2112-4BA7-9891-1286ECD7DB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32EF10EA-2112-4BA7-9891-1286ECD7DB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DC2A62-E73B-4650-B87F-4C339887C447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DC2A62-E73B-4650-B87F-4C339887C447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DC2A62-E73B-4650-B87F-4C339887C447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DC2A62-E73B-4650-B87F-4C339887C447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{02AC4802-943B-4F77-84D9-A65A9E6ACBC6} = {5A5FA9A7-8E2A-4B73-8E2E-141EE10097C5}
+		{25DC2A62-E73B-4650-B87F-4C339887C447} = {AC5223D1-B7D5-4F43-AFC2-04E897AD4C63}
 	EndGlobalSection
 EndGlobal
