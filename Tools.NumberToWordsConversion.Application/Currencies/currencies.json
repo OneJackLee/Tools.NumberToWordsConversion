@@ -1,0 +1,46 @@
+[
+  {
+    "Code": "USD",
+    "Name": "US Dollar",
+    "Unit": {
+      "Singular": "Dollar",
+      "Plural": "Dollars"
+    },
+    "Subunit": {
+      "Singular": "Cent",
+      "Plural": "Cents"
+    }
+  },
+  {
+    "Code": "AUD",
+    "Name": "Australian Dollar",
+    "Unit": {
+      "Singular": "Dollar",
+      "Plural": "Dollars"
+    },
+    "Subunit": {
+      "Singular": "Cent",
+      "Plural": "Cents"
+    }
+  },
+  {
+    "Code": "MYR",
+    "Name": "Malaysian Ringgit",
+    "Unit": {
+      "Singular": "Ringgit",
+      "Plural": "Ringgit"
+    },
+    "Subunit": {
+      "Singular": "Sen",
+      "Plural": "Sen"
+    }
+  },
+  {
+    "Code": "JPY",
+    "Name": "Japanese Yen",
+    "Unit": {
+      "Singular": "Yen",
+      "Plural": "Yen"
+    }
+  }
+]
