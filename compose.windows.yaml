@@ -14,4 +14,4 @@
       - "5169:5169"
       - "5170:5170"
     volumes:
-      - ~/.aspnet/https:/cert:ro
+      - ${USERPROFILE}/.aspnet/https:/cert:ro
