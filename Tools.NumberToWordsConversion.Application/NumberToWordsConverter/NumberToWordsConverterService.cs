@@ -61,20 +61,23 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
     private static string GetUnitAmountToWords(decimal amount, CurrencyUnit currencyUnit)
     {
         var result = new StringBuilder();
+        
+        if (amount == 0)
+            result.Append("Zero ");
 
         var currency = amount > 1 ? currencyUnit.Plural : currencyUnit.Singular;
         
         foreach (var magnitude in Magnitude.All.OrderByDescending(x => x.PowerOfTen))
         {
-            var magnitudeUnit = ((int)Math.Pow(10, magnitude.PowerOfTen));
-            var magnitudeAmount = (int) Math.Truncate(amount / magnitudeUnit);
+            var magnitudeUnit = ((long)Math.Pow(10, magnitude.PowerOfTen));
+            var magnitudeAmount = (long) Math.Truncate(amount / magnitudeUnit);
 
             if (magnitudeAmount > 0)
             {
-                result.Append($"{Convert3DigitToWords(magnitudeAmount)} ");
+                result.Append($"{Convert3DigitToWords((int) magnitudeAmount)} ");
                 
                 if (!string.IsNullOrWhiteSpace(magnitude.Name))
-                    result.Append($"{magnitudeUnit} ");
+                    result.Append($"{magnitude.Name} ");
             }
 
             amount %= magnitudeUnit;
@@ -88,6 +91,9 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
     private static string GetSubunitAmountToWords(int amount, CurrencyUnit? currencyUnit)
     {
         var result = new StringBuilder();
+        
+        if (amount == 0)
+            result.Append("Zero ");
 
         result.Append($"{Convert3DigitToWords(amount)} ");
         
