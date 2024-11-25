@@ -5,10 +5,6 @@ using Tools.NumberToWordsConversion.Application.Magnitudes;
 
 namespace Tools.NumberToWordsConversion.Application.NumberToWordsConverter;
 
-public interface INumberToWordsConverterService
-{
-    string GetAmountToWords(decimal amount, string currencyCode);
-}
 
 public class NumberToWordsConverterService : INumberToWordsConverterService, ISingletonService
 {
@@ -141,3 +137,4 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
         return result.ToString().Trim();
     }
 }
+
