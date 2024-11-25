@@ -1,10 +1,13 @@
 using Tools.NumberToWordsConversion.Components;
+using Tools.NumberToWordsConversion.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
