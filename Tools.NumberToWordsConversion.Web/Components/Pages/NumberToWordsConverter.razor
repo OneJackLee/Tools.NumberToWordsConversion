@@ -1,9 +1,96 @@
 ﻿@page "/"
+@using Tools.NumberToWordsConversion.Application.Currencies
 @using Tools.NumberToWordsConversion.Application.NumberToWordsConverter
 @inject INumberToWordsConverterService NumberToWordsConverterService
+@rendermode InteractiveServer
 
 <PageTitle>Number to Words Converter - OneJackLee</PageTitle>
 
 <h1>Welcome</h1>
 
-Welcome to your new app.
+<EditForm Model="@Input" OnValidSubmit="@ValidFormSubmitted">
+    <NumberToWordsConverterInputValidation />
+    <ValidationSummary />
+    <fieldset>
+        <div class="row mb-3">
+            <label for="currency" class="col-sm-2 col-form-label">Currency</label>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <InputSelect id="currency" class="form-control" DisplayName="currency" @bind-Value="@Input.CurrencyCode">
+                            <option selected hidden>Select a currency</option>
+                            @foreach (var currency in Currency.All)
+                            {
+                                <option value="@currency.Code">@currency.Name</option>
+                            }
+                        </InputSelect>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <InputNumber @bind-Value="@Input.Amount" DisplayName="Amount" class="form-control" id="amount" placeholder="Key in your amount">
+                        </InputNumber>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            <span>Enter</span>
+        </button>
+    </fieldset>
+</EditForm>
+
+<hr />
+
+@if (Results.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>Input</td>
+            <td>Result</td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var record in Results.OrderByDescending(x => x.Timestamp))
+        {
+            <tr>
+                <td>@record.CurrencyCode @record.Amount</td>
+                <td>@record.Result</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    private sealed record ResultHolder(string CurrencyCode, decimal Amount, string Result, DateTime Timestamp);
+
+    private NumberToWordsConverterInput Input { get; } = new();
+
+    private List<ResultHolder> Results = new();
+
+    private void ValidFormSubmitted()
+    {
+        if (Input.Amount.HasValue && !string.IsNullOrEmpty(Input.CurrencyCode))
+        {
+            var result = NumberToWordsConverterService.GetAmountToWords(Input.Amount.Value, Input.CurrencyCode);
+
+            Results.Add(new ResultHolder(Input.CurrencyCode, Input.Amount.Value, result, DateTime.Now));
+
+            StateHasChanged();
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please check the fields.");
+        }
+    }
+}

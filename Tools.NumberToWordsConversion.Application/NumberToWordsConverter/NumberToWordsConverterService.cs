@@ -25,7 +25,7 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
     
         if (currency is null)
             throw new InvalidOperationException($"The currency code {currencyCode} is not supported.");
-
+        
         var isNegative = amount < 0;
         
         amount = Math.Abs(amount);
@@ -54,7 +54,7 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
 
     private static int GetDecimalDigits(decimal amount)
     {
-        var power = (int)(Math.Pow(10, amount.Scale));
+        var power = Pow(10, amount.Scale);
         return (int)(amount * power);
     }
 
@@ -69,7 +69,7 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
         
         foreach (var magnitude in Magnitude.All.OrderByDescending(x => x.PowerOfTen))
         {
-            var magnitudeUnit = ((long)Math.Pow(10, magnitude.PowerOfTen));
+            var magnitudeUnit = Pow(10, magnitude.PowerOfTen);
             var magnitudeAmount = (long) Math.Truncate(amount / magnitudeUnit);
 
             if (magnitudeAmount > 0)
@@ -142,5 +142,17 @@ public class NumberToWordsConverterService : INumberToWordsConverterService, ISi
         
         return result.ToString().Trim();
     }
+    
+    private static decimal Pow(decimal value, int power) {
+        if(power == 0) return 1.0M;
+        var ret = value;
+        if(power > 0) {
+            for(var _ = 1; _ < power; _++) ret *= value;
+        } else {
+            for(var _ = 0; _ <= -power; _++) ret /= value;
+        }
+        return ret;
+    }
+
 }
 

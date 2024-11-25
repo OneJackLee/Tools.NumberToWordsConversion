@@ -6,9 +6,9 @@ namespace Tools.NumberToWordsConversion.Components.Pages;
 
 public class NumberToWordsConverterInput
 {
-    public string CurrencyCode { get; set; } = string.Empty;
+    public string? CurrencyCode { get; set; }
     
-    public decimal Amount { get; set; }
+    public decimal? Amount { get; set; }
 }
 
 /// <summary>
@@ -18,15 +18,15 @@ public sealed class NumberToWordsConverterInputValidator : AbstractValidator<Num
 {
     public NumberToWordsConverterInputValidator()
     {
-        RuleFor(input => input.CurrencyCode).NotEmpty()
+        RuleFor(input => input.CurrencyCode).NotNull().NotEmpty()
             .Must(MustBeValidCurrencyCode)
-            .WithMessage($"The currency code must be one of the following values:"
+            .WithMessage($"The currency code must be one of the following values: "
                 + $"{string.Join(", ", Currency.All.Select(x => x.Code))}");
-        
-        RuleFor(input => input.Amount).NotEmpty();
+
+        RuleFor(input => input.Amount).NotNull();
     }
     
-    private static bool MustBeValidCurrencyCode(string currencyCode) =>
+    private static bool MustBeValidCurrencyCode(string? currencyCode) =>
         Currency.All.Any(x => x.Code == currencyCode);
 
 }
