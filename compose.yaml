@@ -1,6 +1,6 @@
 ﻿services:
-  tools.numbertowordsconversion:
-    image: tools.numbertowordsconversion
+  app:
+    image: tools.numbertowordsconversion.web
     build:
       context: .
-      dockerfile: Tools.NumberToWordsConversion/Dockerfile
+      dockerfile: ./Tools.NumberToWordsConversion.Web/Dockerfile
