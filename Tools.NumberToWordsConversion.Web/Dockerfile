@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Tools.NumberToWordsConversion.Web/Tools.NumberToWordsConversion.Web.csproj", "Tools.NumberToWordsConversion.Web/"]
+COPY ["Tools.NumberToWordsConversion.Application/Tools.NumberToWordsConversion.Application.csproj", "Tools.NumberToWordsConversion.Application/"]
 RUN dotnet restore "Tools.NumberToWordsConversion.Web/Tools.NumberToWordsConversion.Web.csproj"
 COPY . .
 WORKDIR "/src/Tools.NumberToWordsConversion.Web"

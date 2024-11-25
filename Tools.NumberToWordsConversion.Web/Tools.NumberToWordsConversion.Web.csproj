@@ -13,4 +13,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Tools.NumberToWordsConversion.Application\Tools.NumberToWordsConversion.Application.csproj" />
+    </ItemGroup>
+
 </Project>
