@@ -88,7 +88,7 @@ public sealed record Currency
     /// </summary>
     /// <param name="code">The code of the currency.</param>
     /// <returns>The currency with the specified code.</returns>
-    public static Currency FromCode(string code) => All.Single(currency => currency.Code == code);
+    public static Currency? FromCode(string code) => All.SingleOrDefault(currency => currency.Code == code);
 }
 
 public sealed record CurrencyUnit(string Singular, string Plural);
