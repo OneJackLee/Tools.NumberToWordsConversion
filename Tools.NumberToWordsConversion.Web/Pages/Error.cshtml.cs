@@ -1,8 +1,9 @@
 using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Tools.NumberToWordsConversion.Pages;
+namespace Tools.NumberToWordsConversion.Web.Pages;
 
 [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 [IgnoreAntiforgeryToken]
