@@ -18,7 +18,7 @@ public sealed class NumberToWordsConverterInputValidator : AbstractValidator<Num
 {
     public NumberToWordsConverterInputValidator()
     {
-        RuleFor(input => input.CurrencyCode).NotNull().NotEmpty()
+        RuleFor(input => input.CurrencyCode).NotNull()
             .Must(MustBeValidCurrencyCode)
             .WithMessage($"The currency code must be one of the following values: "
                 + $"{string.Join(", ", Currency.All.Select(x => x.Code))}");
