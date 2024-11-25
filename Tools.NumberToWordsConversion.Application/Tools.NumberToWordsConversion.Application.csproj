@@ -11,6 +11,10 @@
       <EmbeddedResource Include="Currencies\currencies.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
+      <None Remove="Magnitudes\magnitudes.json" />
+      <EmbeddedResource Include="Magnitudes\magnitudes.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

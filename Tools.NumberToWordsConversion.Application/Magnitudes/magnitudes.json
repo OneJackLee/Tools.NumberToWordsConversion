@@ -1,0 +1,42 @@
+[
+  {
+    "PowerOfTen": 0,
+    "Name": ""
+  },
+  {
+    "PowerOfTen": 3,
+    "Name": "Thousand"
+  },
+  {
+    "PowerOfTen": 6,
+    "Name": "Million"
+  },
+  {
+    "PowerOfTen": 9,
+    "Name": "Billion"
+  },
+  {
+    "PowerOfTen": 12,
+    "Name": "Trillion"
+  },
+  {
+    "PowerOfTen": 15,
+    "Name": "Quadrillion"
+  },
+  {
+    "PowerOfTen": 18,
+    "Name": "Quintillion"
+  },
+  {
+    "PowerOfTen": 21,
+    "Name": "Sextillion"
+  },
+  {
+    "PowerOfTen": 24,
+    "Name": "Septillion"
+  },
+  {
+    "PowerOfTen": 27,
+    "Name": "Octillion"
+  }
+]
