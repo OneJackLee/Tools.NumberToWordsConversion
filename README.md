@@ -96,3 +96,9 @@ Currently, it only supports USD, AUD, MYR and SGD as the currency input. Due to 
 it currently only supports up to Octillion, that is 10 to the power of 27.
 
 ## Additional information
+
+This repo also consists of the test plan and design rationale documents for this project.
+
+## Who do I talk to?
+
+Please speak to [OneJackLee](mailto:charliewanj@outlook.com) should you have any issue.
