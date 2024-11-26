@@ -17,10 +17,10 @@ a developer certificates by running the following command on your terminal:
 
 - For Windows user:
 
-       ```pwsh
-       dotnet dev-certs https -ep $env:USERPROFILE\.aspnet\https\aspnetapp.pfx -p password
-       dotnet dev-certs https --trust
-       ```
+   ```pwsh
+   dotnet dev-certs https -ep $env:USERPROFILE\.aspnet\https\aspnetapp.pfx -p password
+   dotnet dev-certs https --trust
+   ```
 
 - For macOS or Linux user:
 
